@@ -12,7 +12,9 @@ const Navbar = () => {
       </div>
       <div className="flex gap-4">
         <img src={user} alt="" />
-        <Link className="btn btn-primary px-8">Login</Link>
+        <Link to="/auth/login" className="btn btn-primary px-8">
+          Login
+        </Link>
       </div>
     </div>
   );
