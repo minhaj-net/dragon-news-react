@@ -1,9 +1,11 @@
 import { CiShare2 } from "react-icons/ci";
 import { FaStar, FaEye } from "react-icons/fa";
 import { IoBookmarkSharp } from "react-icons/io5";
+import { Link } from "react-router";
 
 const NewsCard = ({ news }) => {
-  const { title, rating, total_view, author, thumbnail_url, details } = news;
+  const { id, title, rating, total_view, author, thumbnail_url, details } =
+    news;
 
   // Format date nicely
   const publishedDate = new Date(author.published_date).toLocaleDateString(
@@ -65,7 +67,9 @@ const NewsCard = ({ news }) => {
         </div>
 
         <div className="card-actions justify-end mt-4">
-          <button className="btn btn-outline btn-sm">Read More</button>
+          <Link to={`/news-details/${id}`} className="btn btn-outline btn-sm">
+            Read More
+          </Link>
         </div>
       </div>
     </div>

@@ -4,7 +4,6 @@ import { NavLink } from "react-router";
 const promiseData = fetch("/categories.json").then((res) => res.json());
 const Cetegoris = () => {
   const categories = use(promiseData);
-  console.log(categories);
   return (
     <div>
       <h1 className="font-bold ">All cetegories ({categories.length})</h1>
