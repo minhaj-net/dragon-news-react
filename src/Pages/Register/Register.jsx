@@ -3,8 +3,9 @@ import { Link } from "react-router";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { toast } from "react-toastify";
 
+
 const Register = () => {
-  const { createUser, setUser } = use(AuthContext);
+  const { createUser, setUser,upDateUser } = use(AuthContext);
   const handleRegister = (e) => {
     e.preventDefault();
 
@@ -16,8 +17,13 @@ const Register = () => {
     createUser(email, password)
       .then((result) => {
         const user = result.user;
-        setUser(user);
-        e.target.reset();
+        upDateUser({displayName:name,photoURL:photo}).then(()=>{
+            setUser({...user,displayName:name,photoURL:photo});
+
+            e.target.reset();
+          }).catch(error=>{
+            console.log(error);
+          })
       })
       .catch((error) => {
         console.log(error.message);
