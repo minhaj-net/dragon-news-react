@@ -21,12 +21,12 @@ const Register = () => {
             setUser({...user,displayName:name,photoURL:photo});
 
             e.target.reset();
-          }).catch(error=>{
-            console.log(error);
+          }).catch(()=>{
+            // console.log(error);
           })
       })
       .catch((error) => {
-        console.log(error.message);
+        // console.log(error.message);
         toast.error(error.message);
       });
   };

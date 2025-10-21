@@ -6,12 +6,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyA83OCd2M_XBz0o3NqbiYRl56VW9HMj0sw",
-  authDomain: "dreagon-news-react-f4be0.firebaseapp.com",
-  projectId: "dreagon-news-react-f4be0",
-  storageBucket: "dreagon-news-react-f4be0.firebasestorage.app",
-  messagingSenderId: "972521467925",
-  appId: "1:972521467925:web:298657d6350630e9cf5e1c",
+  apiKey:import.meta.env.VITE_apiKey,
+  authDomain:import.meta.env.VITE_authDomain,
+  projectId:import.meta.env.VITE_projectId,
+  storageBucket:import.meta.env.VITE_storageBucket,
+  messagingSenderId:import.meta.env.VITE_messagingSenderId,
+  appId:import.meta.env.VITE_appId,
 };
 
 // Initialize Firebase
