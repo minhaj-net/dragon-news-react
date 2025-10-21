@@ -6,14 +6,14 @@ import { AuthContext } from "../../Provider/AuthProvider";
 const Navbar = () => {
   const { user, logOut } = use(AuthContext);
   const handleLogOut = () => {
-    console.log("logout button clicek");
+    // console.log("logout button clicek");
     logOut()
-      .then((result) => {
-        const user = result.user;
-        console.log(user);
+      .then(() => {
+        // const user = result.user;
+        // console.log(user);
       })
-      .catch((error) => {
-        console.log(error.message);
+      .catch(() => {
+        // console.log(error.message);
       });
   };
   return (
